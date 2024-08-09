@@ -22,4 +22,25 @@ Bonus: Route53 with Tf https://github.com/terraform-aws-modules/terraform-aws-ro
 8. ./boto3 ( ec2 + vpc full classes ) 
 
 
+More Bonus:
+
+https://gateway.envoyproxy.io/docs/tasks/traffic/backend/
+
+https://helm.sh/docs/chart_best_practices/custom_resource_definitions/
+
+https://github.com/bitnami/charts/tree/main/bitnami
+
+https://bitnami.com/stacks
+
+https://github.com/traefik/traefik-helm-chart/tree/master
+
+https://github.com/openfaas/faas-netes
+
+https://github.com/istio/istio
+
+
+https://github.com/kubernetes/ingress-nginx
+
+
+
  

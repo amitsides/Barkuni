@@ -14,6 +14,7 @@
 
 #### Bonus: ./expose-kube-system Expose kube-system with Ingress Controllers
 
+### Ingress Conrtolers, traefik + ALB + ROUTE53 
 Ingresses: https://aws.amazon.com/blogs/containers/exposing-kubernetes-applications-part-3-nginx-ingress-controller/
 
 #### Bonus: ALB with terraform https://github.com/terraform-aws-modules/terraform-aws-alb
@@ -25,7 +26,7 @@ Ingresses: https://aws.amazon.com/blogs/containers/exposing-kubernetes-applicati
    6. see all templates: https://github.com/arttor/helmify/tree/main/examples/app/templates
    7. see operators: https://github.com/arttor/helmify/tree/main/examples/operator/templates
    6. using best practises    https://github.com/davidh83110/flask-k8s-helm/tree/master
-#### Attached Traefik HelmChart
+#### Attached Traefik HelmChart (just edit values.yaml plug-n-play :) 
 7.    See specifically for you remark on
 #### IngressRoute is the CRD implementation of a Traefik HTTP Router.
 8. 1. gateway.networking.k8s.io_httproutes.yaml

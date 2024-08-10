@@ -33,8 +33,11 @@ Ingresses: https://aws.amazon.com/blogs/containers/exposing-kubernetes-applicati
 9. 2. gateway.networking.k8s.io_tlsroutes.yaml
 #### Bonus ./boto3 ( ec2 + vpc full classes ) 
 
+# HTTPs goes  DNS >> Route53 >> AWS ALB >> Traefik-IngressRoute or Istio Gateways & Service Entry >> K8s Pods >> Python Restful API running on gunicorn
+## See also EKS ALB + ISTIO + TLS https://github.com/aws-samples/eks-alb-istio-with-tls
+Enjoy production
 
-#### More Bonus:
+#### Extra Bonuses: 
 
 https://gateway.envoyproxy.io/docs/tasks/traffic/backend/
 
@@ -49,6 +52,11 @@ https://github.com/traefik/traefik-helm-chart/tree/master
 https://github.com/openfaas/faas-netes
 
 https://github.com/istio/istio
+
+### Istio Gateways & Service Entry 
+https://istio.io/latest/docs/reference/config/networking/service-entry/
+
+https://istio.io/latest/docs/concepts/traffic-management/#gateways
 
 https://github.com/kubernetes/ingress-nginx
 

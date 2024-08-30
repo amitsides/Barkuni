@@ -1,0 +1,20 @@
+# tenant-a-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tenant-a-config
+  namespace: tenant-a
+data:
+  APP_COLOR: blue
+  APP_ENV: production
+
+---
+# tenant-b-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tenant-b-config
+  namespace: tenant-b
+data:
+  APP_COLOR: green
+  APP_ENV: staging

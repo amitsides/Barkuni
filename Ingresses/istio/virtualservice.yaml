@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: tenant-a-vs
+  namespace: tenant-a
+spec:
+  hosts:
+    - "tenant-a.example.com"
+  gateways:
+    - istio-system/istio-ingressgateway
+  http:
+    - route:
+        - destination:
+            host: tenant-a-service
+            port:
+              number: 80

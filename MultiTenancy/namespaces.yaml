@@ -1,0 +1,12 @@
+# tenant-a.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tenant-a
+
+---
+# tenant-b.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tenant-bw

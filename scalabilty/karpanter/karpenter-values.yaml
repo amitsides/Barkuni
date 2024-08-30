@@ -1,0 +1,57 @@
+# Karpenter Helm Chart values.yaml
+
+## Global Settings
+global:
+  aws:
+    defaultInstanceProfile: "KarpenterNodeInstanceProfile"
+    clusterName: "your-cluster-name"
+    clusterEndpoint: "https://your-cluster-endpoint.eks.amazonaws.com"
+
+## Karpenter Controller Settings
+controller:
+  resources:
+    requests:
+      cpu: 1
+      memory: 1Gi
+    limits:
+      cpu: 1
+      memory: 1Gi
+
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: "arn:aws:iam::123456789012:role/KarpenterControllerRole"
+
+  settings:
+    aws:
+      defaultInstanceProfile: "KarpenterNodeInstanceProfile"
+      interruptionQueueName: "your-cluster-name"
+    batchMaxDuration: "10s"
+    batchIdleDuration: "1s"
+
+## Node Template Defaults
+nodeTemplate:
+  subnetSelector:
+    karpenter.sh/discovery: "your-cluster-name"
+  securityGroupSelector:
+    karpenter.sh/discovery: "your-cluster-name"
+  tags:
+    KarpenterManaged: "true"
+
+## Node Pool Defaults
+nodePoolDefaults:
+  limits:
+    resources:
+      cpu: 1000
+      memory: 1000Gi
+
+## Provisioner Settings
+provisioner:
+  ttlSecondsAfterEmpty: 30
+
+## Metrics Server Settings
+metrics:
+  enabled: true
+
+## Webhook Settings
+webhook:
+  enabled: true

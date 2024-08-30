@@ -1,0 +1,52 @@
+# Istio Helm Chart values.yaml for multi-tenant TLS setup
+
+global:
+  mtls:
+    enabled: true
+
+gateways:
+  istio-ingressgateway:
+    enabled: true
+    sds:
+      enabled: true
+    servers:
+      - port:
+          number: 443
+          name: https-tenant-a
+          protocol: HTTPS
+        hosts:
+          - "tenant-a.example.com"
+        tls:
+          mode: SIMPLE
+          credentialName: tenant-a-tls-secret
+      - port:
+          number: 443
+          name: https-tenant-b
+          protocol: HTTPS
+        hosts:
+          - "tenant-b.example.com"
+        tls:
+          mode: SIMPLE
+          credentialName: tenant-b-tls-secret
+
+pilot:
+  enabled: true
+
+telemetry:
+  enabled: true
+
+tracing:
+  enabled: true
+  provider: zipkin
+
+prometheus:
+  enabled: true
+
+grafana:
+  enabled: true
+
+kiali:
+  enabled: true
+
+certmanager:
+  enabled: true

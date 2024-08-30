@@ -1,4 +1,6 @@
-#  Barkuni Corp
+###  Amit Sides  (Devops Expert)
+This is a repository to present the way I work as a devops and the tools and resources I see usefuly to any devops.
+
 #### ./src  RESTFull API written in Python/Flask (Resfull api implements HTTP such as POST/PUT/HEAD/GET to manipulate the Model in MVC or MVVM)
 #### Restful Sample
       GET - /api/Category - Retrieve all categories
@@ -7,19 +9,19 @@
       DELETE - /api/Category - Delete a category
       GET - /api/Comment - Retrieve all the stored comments
       POST - /api/Comment - Add new comment
-#### ./tf is Terraform module for init/provision EKS with VPC ( https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks )
+
+#### ./tf_eks is Terraform module for init/provision EKS with VPC ( https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks )
 #### ./Docker has multiple ways to write dockerfile for python apps (https://dev.to/isaackumi/dockerizing-a-flask-application-a-multi-stage-dockerfile-approach-389a)
 
-#### Bonus: ./actions github actions for Continus Integration ( https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python)
+#### ./actions github actions for Continus Integration ( https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python)
 
-#### Bonus: ./expose-kube-system Expose kube-system with Ingress Controllers
+#### ./expose-kube-system Expose kube-system with Ingress Controllers
 
 ### Ingress Conrtolers, traefik + ALB + ROUTE53 
 Ingresses: https://aws.amazon.com/blogs/containers/exposing-kubernetes-applications-part-3-nginx-ingress-controller/
 
-#### Bonus: ALB with terraform https://github.com/terraform-aws-modules/terraform-aws-alb
-
-#### Bonus: Route53 with Tf https://github.com/terraform-aws-modules/terraform-aws-route53/tree/master/examples/complete
+#### ALB with terraform https://github.com/terraform-aws-modules/terraform-aws-alb
+#### Route53 with Tf https://github.com/terraform-aws-modules/terraform-aws-route53/tree/master/examples/complete
 
 #### ./Chart HelmChart could be 
    5. automated with Helmify ( https://github.com/thedataincubator/flask-chart ) 
@@ -33,11 +35,10 @@ Ingresses: https://aws.amazon.com/blogs/containers/exposing-kubernetes-applicati
 9. 2. gateway.networking.k8s.io_tlsroutes.yaml
 #### Bonus ./boto3 ( ec2 + vpc full classes ) 
 
-# HTTPs goes  DNS >> Route53 >> AWS ALB >> Traefik-IngressRoute or Istio Gateways & Service Entry >> K8s Pods >> Python Restful API running on gunicorn
-## See also EKS ALB + ISTIO + TLS https://github.com/aws-samples/eks-alb-istio-with-tls
-Enjoy production
+#### HTTPs goes  Route53/DNS >> AWS ALB >> Traefik-IngressRoute or Istio Gateways/Service Entry >> K8s Pods >> Contianer (Python Restful API running on gunicorn)
+See also EKS ALB + ISTIO + TLS https://github.com/aws-samples/eks-alb-istio-with-tls
 
-#### Extra Bonuses: 
+#### Resources
 
 https://gateway.envoyproxy.io/docs/tasks/traffic/backend/
 
@@ -53,7 +54,6 @@ https://github.com/openfaas/faas-netes
 
 https://github.com/istio/istio
 
-### Istio Gateways & Service Entry 
 https://istio.io/latest/docs/reference/config/networking/service-entry/
 
 https://istio.io/latest/docs/concepts/traffic-management/#gateways

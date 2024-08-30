@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kubernetes-yaml-templates" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/terraform/tf_r53/terraform-aws-route53" vcs="Git" />
   </component>
 </project>

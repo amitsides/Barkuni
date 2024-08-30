@@ -10,18 +10,15 @@ This is a repository to present the way I work as a devops and the tools and res
       GET - /api/Comment - Retrieve all the stored comments
       POST - /api/Comment - Add new comment
 
-#### ./tf_eks is Terraform module for init/provision EKS with VPC ( https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks )
-#### ./Docker has multiple ways to write dockerfile for python apps (https://dev.to/isaackumi/dockerizing-a-flask-application-a-multi-stage-dockerfile-approach-389a)
-
-#### ./actions github actions for Continus Integration ( https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python)
-
-#### ./expose-kube-system Expose kube-system with Ingress Controllers
-
-### Ingress Conrtolers, traefik + ALB + ROUTE53 
-Ingresses: https://aws.amazon.com/blogs/containers/exposing-kubernetes-applications-part-3-nginx-ingress-controller/
-
+#### ./terraform  containts resources for init/provision EKS with VPC ( https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks )
 #### ALB with terraform https://github.com/terraform-aws-modules/terraform-aws-alb
 #### Route53 with Tf https://github.com/terraform-aws-modules/terraform-aws-route53/tree/master/examples/complete
+
+#### ./Docker has multiple ways to write dockerfile for python apps (https://dev.to/isaackumi/dockerizing-a-flask-application-a-multi-stage-dockerfile-approach-389a)
+#### ./actions github actions for Continus Integration ( https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python)
+
+### ./Ingresses Conrtolers Istio/traefik 
+Ingresses: https://aws.amazon.com/blogs/containers/exposing-kubernetes-applications-part-3-nginx-ingress-controller/
 
 #### ./Chart HelmChart could be 
    5. automated with Helmify ( https://github.com/thedataincubator/flask-chart ) 

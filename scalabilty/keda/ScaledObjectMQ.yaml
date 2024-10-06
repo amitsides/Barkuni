@@ -1,0 +1,13 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: rabbitmq-scaler
+spec:
+  scaleTargetRef:
+    deploymentName: your-deployment
+  triggers:
+  - type: rabbitmq
+    metadata:
+      queueName: myqueue
+      host: amqp://guest:guest@rabbitmq.default.svc.cluster.local:5672
+      queueLength: "20"
